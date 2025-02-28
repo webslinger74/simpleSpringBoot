@@ -4,11 +4,12 @@ pipeline {
         stage('Build') { 
             steps {
                withMaven(
-            // Maven installation declared in the Jenkins "Global Tool Configuration"
-            maven: 'maven-3', // (1)
+                 maven: 'maven-3'
         ) {
                 sh 'mvn -B -DskipTests clean package' 
             }
         }
     }
+}
+
 }
