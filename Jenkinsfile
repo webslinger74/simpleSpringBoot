@@ -10,8 +10,10 @@ pipeline {
     }
         stage('Test') {
             steps {
+              withMaven(maven: 'maven-3') {
                 sh 'mvn test'
             }
+          }
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
