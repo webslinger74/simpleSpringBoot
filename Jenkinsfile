@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        mvn
+        mvn 3.9
     }
     stages {
         stage('Build') { 
