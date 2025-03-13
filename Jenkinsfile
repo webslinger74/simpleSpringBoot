@@ -21,7 +21,7 @@ pipeline {
             }
         } 
       stage('publish') {
-        agent any
+        agent docker
         steps {
           sh 'chmod +x ./dockerbuild.sh'
           sh 'docker build --tag stevens-react-in-docker .'
