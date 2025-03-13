@@ -2,7 +2,7 @@
 
 echo 'creating image from dockerFile'
 
-docker build --tag stevens-react-in-docker .
+sh 'docker build --tag stevens-react-in-docker .'
 
 echo 'starting container'
 
