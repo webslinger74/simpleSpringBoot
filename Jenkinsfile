@@ -22,7 +22,7 @@ pipeline {
         } 
       stage('publish') {
         steps {
-        sh 'dockerbuild.sh'
+        sh './dockerbuild.sh'
         }
       }
   }
