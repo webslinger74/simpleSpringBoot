@@ -21,7 +21,9 @@ pipeline {
             }
         } 
       stage('publish') {
+        steps {
         sh 'dockerbuild.sh'
+        }
       }
   }
 }
