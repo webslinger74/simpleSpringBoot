@@ -22,7 +22,8 @@ pipeline {
         } 
       stage('publish') {
         steps {
-        sh './dockerbuild.sh'
+          sh 'chmod +x ./dockerbuild.sh'
+          sh './dockerbuild.sh'
         }
       }
   }
