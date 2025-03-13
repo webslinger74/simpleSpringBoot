@@ -24,6 +24,8 @@ pipeline {
         agent any
         steps {
           sh 'chmod +x ./dockerbuild.sh'
+          sh 'docker build --tag stevens-react-in-docker .
+          sh
           sh './dockerbuild.sh'
         }
       }
