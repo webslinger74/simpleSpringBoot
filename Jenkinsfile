@@ -19,6 +19,9 @@ pipeline {
                     junit 'target/surefire-reports/*.xml'
                 }
             }
-        }      
+        } 
+      stage('publish') {
+        sh 'dockerbuild.sh'
+      }
   }
 }
