@@ -29,6 +29,7 @@ pipeline {
           def output = sh(returnStdout: true, script: 'whoami')
                     echo "Output: ${output}"
           }
+          sh 'docker build --tag stevens-react-in-docker .'
           sh './dockerbuild.sh'
         }
       }
