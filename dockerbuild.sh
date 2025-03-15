@@ -1,5 +1,3 @@
-#!/usr/bin/env sh
-
 echo 'creating image from dockerFile'
 
 docker build --tag stevens-react-in-docker .
