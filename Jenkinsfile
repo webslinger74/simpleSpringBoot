@@ -25,7 +25,7 @@ pipeline {
           sh 'chmod +x ./dockerbuild.sh'
           sh 'chmod 777 ./dockerbuild.sh'
           sh 'su root'
-          sh'whoami'
+          sh 'whoami'
           sh './dockerbuild.sh'
         }
       }
