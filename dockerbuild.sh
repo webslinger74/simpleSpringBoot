@@ -1,4 +1,5 @@
 echo 'creating image from dockerFile'
+echo '$whoami'
 
 docker build --tag stevens-react-in-docker .
 
