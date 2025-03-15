@@ -25,8 +25,10 @@ pipeline {
           sh 'chmod +x ./dockerbuild.sh'
           sh 'chmod 777 ./dockerbuild.sh'
           sh 'su root'
+          script {
           def output = sh(returnStdout: true, script: 'whoami')
                     echo "Output: ${output}"
+          }
           sh './dockerbuild.sh'
         }
       }
