@@ -24,13 +24,13 @@ pipeline {
         steps {
           sh 'chmod +x ./dockerbuild.sh'
           sh 'chmod 777 ./dockerbuild.sh'
-          sh 'su root'
+          sh 'su -'
           script {
           def output = sh(returnStdout: true, script: 'whoami')
                     echo "Output: ${output}"
           }
           sh 'docker build --tag stevens-react-in-docker .'
-          sh './dockerbuild.sh'
+          // sh './dockerbuild.sh'
         }
       }
   }
