@@ -21,6 +21,7 @@ pipeline {
             }
         } 
       stage('publish') {
+        agent any
         steps {
           sh 'chmod +x ./dockerbuild.sh'
           sh 'chmod 777 ./dockerbuild.sh'
